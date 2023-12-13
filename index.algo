@@ -1,0 +1,15 @@
+ALGORITHM pal 
+VAR ch : STRING 
+BEGIN
+IF (ch.length<=1) THEN 
+WRITE (TRUE)
+ELSE  IF (ch[0]<>ch.length-1) THEN
+WRITE(false)
+
+ELSE
+IF (ch[0]=ch.length-1) THEN
+DELETE (ch , 0,1)
+DELETE (ch.length-1,0,1)
+  pal(ch)
+END_IF
+END 
